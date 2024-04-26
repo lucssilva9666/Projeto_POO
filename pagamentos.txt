@@ -1,0 +1,4 @@
+Pagamento processado para João (Funcionário Regular). Novo salário: R$ 1700.0
+Pagamento processado para Maria (Gerente). Novo salário: R$ 4000.0
+Pagamento processado para Carlos (Funcionário Regular). Novo salário: R$ 1500.0
+

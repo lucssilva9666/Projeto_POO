@@ -1,0 +1,54 @@
+Classe: Funcionario
+Pacote: main.java.br.inatel.empresa.model
+
+Descrição:
+Classe abstrata que serve como base para diferentes tipos de funcionários. Define a estrutura comum e obriga as subclasses a implementar o método calcularSalario().
+
+Membros:
+nome: String - Armazena o nome do funcionário.
+salario: double - Armazena o salário do funcionário.
+
+Construtor(es):
+Funcionario(String nome, double salario) - Inicializa um novo funcionário com nome e salário especificados.
+
+Método(s):
+calcularSalario(): void - Método abstrato que deve ser implementado pelas subclasses para calcular o salário específico do tipo de funcionário.
+
+----------------------------------------------------------------------------------------------------------
+Classe: FuncionarioRegular
+Pacote: main.java.br.inatel.empresa.model
+
+Descrição:
+Subclasse de Funcionario. Representa um funcionário regular.
+
+Construtor(es):
+FuncionarioRegular(String nome, double salario) - Inicializa um novo funcionário regular com nome e salário especificados.
+
+Método(s):
+calcularSalario(): void - Implementa o cálculo do salário subtraindo 300 do salário base.
+
+----------------------------------------------------------------------------------------------------------
+Classe: GerenciadorFuncionarios
+Pacote: main.java.br.inatel.services
+
+Descrição:
+Classe responsável por gerenciar uma lista de funcionários e processar seus pagamentos.
+
+Membros:
+funcionarios: List<Funcionario> - Lista contendo os funcionários a serem gerenciados.
+
+Construtor(es):
+GerenciadorFuncionarios(List<Funcionario> funcionarios) - Inicializa o gerenciador com uma lista de funcionários.
+
+Método(s):
+processarPagamento(): void - Processa o pagamento de todos os funcionários na lista, chamando o método calcularSalario() para cada funcionário.
+
+----------------------------------------------------------------------------------------------------------
+Classe: Main
+Pacote: main.java.br.inatel
+
+Descrição:
+Classe principal que contém o método main para iniciar o programa.
+
+Método(s):
+main(String[] args): void - Ponto de entrada do programa. Cria uma lista de funcionários a partir de um arquivo de texto, inicializa um GerenciadorFuncionarios com essa lista e chama o método para processar os pagamentos.

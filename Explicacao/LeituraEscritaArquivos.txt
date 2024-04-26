@@ -1,0 +1,8 @@
+O codigo le o arquivo funcionarios.txt, da seguinte maneira:
+A cada virgula é uma informação de um campo de um funcionario na seguinte sequencia: Tipo, nome e salario
+
+Regular,João,2000.00
+Gerente,Maria,3000.00
+Regular,Carlos,1800.00
+
+Ao rodar o codigo é gerado um arquivo de pagamentos.txt, onde esta o salario ja ajustado com o tipo de cada funcionario.

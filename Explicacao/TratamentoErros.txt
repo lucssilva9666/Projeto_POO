@@ -1,0 +1,1 @@
+O codigo inteiro tem tratamentos de erros usando: Try/Catch

@@ -1,0 +1,16 @@
+Uso do Polimorfismo no Código:
+O polimorfismo no seu projeto é evidenciado principalmente através do método calcularSalario() definido na classe abstrata Funcionario e sobreescrito nas subclasses FuncionarioRegular e Gerente. 
+Quando o método processarPagamento() da classe GerenciadorFuncionarios é invocado, ele percorre uma lista de objetos do tipo Funcionario e chama calcularSalario() em cada um deles.
+
+Detalhamento do Polimorfismo
+
+1- Definição da Classe Abstrata Funcionario:
+Funcionario é uma classe abstrata que define um método abstrato calcularSalario(). Esse método é um "contrato" que todas as subclasses devem cumprir, fornecendo sua própria implementação específica.
+
+2- Subclasses FuncionarioRegular e Gerente:
+FuncionarioRegular e Gerente são subclasses de Funcionario e cada uma fornece sua própria implementação de calcularSalario(). Por exemplo, a implementação em FuncionarioRegular pode envolver a subtração de um valor fixo do salário, enquanto Gerente pode incluir bônus adicionais.
+Quando calcularSalario() é chamado em um objeto do tipo Funcionario, a JVM determina qual implementação específica do método deve ser executada, dependendo do tipo real do objeto (seja FuncionarioRegular ou Gerente).
+
+3- Chamada Polimórfica:
+A chamada a funcionario.calcularSalario() é um exemplo de chamada polimórfica. 
+O método específico que é chamado depende do tipo real do objeto que é referenciado pela variável funcionario no momento da execução. Este é um exemplo de vinculação dinâmica, onde o tipo de objeto determina a execução do método.

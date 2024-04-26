@@ -1,0 +1,3 @@
+Regular,João,2000.00
+Gerente,Maria,3000.00
+Regular,Carlos,1800.00

@@ -1,0 +1,16 @@
+A herança é usada para criar uma relação entre uma classe base abstrata chamada Funcionario e suas subclasses FuncionarioRegular e outras possíveis subclasses (como Gerente, que foi mencionada anteriormente). 
+
+Vamos analisar como a herança é aplicada:
+
+Classe Base: Funcionario
+A classe Funcionario é declarada como uma classe abstrata. Isso significa que ela não pode ser instanciada diretamente, e é usada principalmente como uma classe base para outras classes. 
+Ela define a estrutura e o comportamento geral que todos os tipos de funcionários devem ter, neste caso, um nome e um salário, e um método abstrato calcularSalario() que cada tipo de funcionário implementará de maneira específica.
+
+Subclasse: FuncionarioRegular
+A classe FuncionarioRegular é uma subclasse de Funcionario. Ela herda as propriedades nome e salario da superclasse e fornece uma implementação concreta para o método abstrato calcularSalario(). 
+Essa implementação específica ajusta o salário do funcionário regular subtraindo um valor fixo (como $300), que pode representar deduções ou qualquer outra lógica de negócio relevante.
+
+Subclasse: Gerente
+A classe Gerente é uma subclasse de Funcionario. Ela herda as propriedades nome e salario da superclasse, contendo um departamento tambem e fornece uma implementação concreta para o método abstrato calcularSalario(). 
+Essa implementação específica ajusta o salário do gerente somando um valor fixo (como $1000), que pode representar deduções ou qualquer outra lógica de negócio relevante.
+
