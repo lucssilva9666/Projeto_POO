@@ -1,1 +1,21 @@
 O codigo inteiro tem tratamentos de erros usando: Try/Catch
+
+O bloco try-catch utilizado no GerenciarFuncionarios do código é uma estrutura para lidar com exceções que podem ocorrer durante a execução do código contido no bloco try. Aqui está uma explicação detalhada do que está acontecendo:
+
+1- O código dentro do bloco try é responsável por processar os pagamentos dos funcionários e escrever as informações em um arquivo de texto chamado "pagamentos.txt".
+2- O bloco try é seguido por um bloco catch, que captura qualquer exceção do tipo IOException que pode ser lançada durante a execução do código dentro do bloco try.
+3- No bloco try, é instanciado um objeto BufferedWriter que é usado para escrever no arquivo "pagamentos.txt". Este objeto é inicializado com um novo objeto FileWriter, que representa o arquivo onde os dados serão escritos. O parâmetro true indica que os dados serão anexados ao arquivo, se ele já existir.
+4- Dentro do loop for, os pagamentos dos funcionários são processados e as informações são escritas no arquivo usando o objeto BufferedWriter.
+5- Se ocorrer uma exceção do tipo IOException durante a escrita no arquivo, o controle é transferido para o bloco catch. Dentro deste bloco, uma mensagem de erro é exibida indicando que houve um erro ao escrever no arquivo, juntamente com a mensagem específica da exceção (e.getMessage()).
+6- O bloco catch previne que o programa encerre abruptamente caso ocorra uma exceção durante a escrita no arquivo, permitindo que o programa lide com o erro de forma adequada e exiba uma mensagem informativa para o usuário.
+
+No trecho da main novamente vemos o uso do bloco try-catch para lidar com exceções que podem ocorrer durante a execução do código contido no bloco try. Vamos examinar mais de perto:
+
+1- O bloco try envolve a leitura de um arquivo de texto chamado "funcionarios.txt" para obter informações sobre os funcionários da empresa.
+2- Dentro do bloco try, um objeto Scanner é inicializado para ler o conteúdo do arquivo. O arquivo é passado como argumento para o construtor do Scanner.
+3- Enquanto houver linhas não lidas no arquivo, o loop while continua executando. Em cada iteração do loop, uma linha é lida do arquivo e processada.
+4- Cada linha lida é dividida em partes utilizando a vírgula como delimitador, usando o método split(). Os dados resultantes são armazenados no array dados.
+Verifica-se se a linha contém três elementos (função, nome e salário) antes de prosseguir com a criação do funcionário. Isso é feito para garantir que as linhas do arquivo estejam formatadas corretamente.
+5- Dependendo do valor da função (Regular ou Gerente), um objeto FuncionarioRegular ou Gerente é criado e adicionado à lista de funcionários.
+6- Se ocorrer uma exceção do tipo IOException durante a leitura do arquivo, o controle é transferido para o bloco catch. Dentro deste bloco, uma mensagem de erro é exibida indicando que houve um erro ao ler o arquivo de funcionários, juntamente com a mensagem específica da exceção (e.getMessage()).
+7- O bloco catch previne que o programa encerre abruptamente caso ocorra uma exceção durante a leitura do arquivo, permitindo que o programa lide com o erro de forma adequada e exiba uma mensagem informativa para o usuário.
